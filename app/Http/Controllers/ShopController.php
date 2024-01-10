@@ -14,27 +14,27 @@ class ShopController extends Controller
 {
      //response the controller on website
      public function index(){
-        return Inertia::render('/');
+        return Inertia::render('Shop/');
     }
 
     public function register(){
-        return Inertia::render('/Register');
+        return Inertia::render('Shop/Register');
     }
 
     public function login(){
-        return Inertia::render('/Login');
+        return Inertia::render('Shop/Login');
     }
 
     public function productlist(){
-        return Inertia::render('/ProductList');
+        return Inertia::render('Shop/ProductList');
     }
 
     public function userproductlist(){
-        return Inertia::render('/User/ProductList');
+        return Inertia::render('Shop/User/ProductList');
     }
 
     public function orderlist(){
-        return Inertia::render('/User/OrderList');
+        return Inertia::render('Shop/User/OrderList');
     }
 
     //product management api route
