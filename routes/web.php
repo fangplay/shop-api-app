@@ -35,6 +35,6 @@ Route::get('/dashboard', function () {
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
 
-Route::resource('shop', ShopController::class);
+Route::resource('/shop', ShopController::class);
 
 require __DIR__.'/auth.php';

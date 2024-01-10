@@ -33,6 +33,10 @@ class ShopController extends Controller
         return Inertia::render('Shop/User/ProductList');
     }
 
+    public function userprofile(){
+        return Inertia::render('Shop/User');
+    }
+
     public function orderlist(){
         return Inertia::render('Shop/User/OrderList');
     }

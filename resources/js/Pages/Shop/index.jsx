@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Inertia } from '@inertiajs/inertia';
+import MainLayout from '@Layouts/MainLayout';
 
-export default function Index(){
+export  default function Index(){
     return(
-        <div>
-            <p>Beta Devision</p>
-        </div>
+        <MainLayout>
+            <p>Beta Reveration</p>
+        </MainLayout>
+        // <p>ShopBetaDevRevision</p>
     );
 }

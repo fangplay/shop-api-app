@@ -4,12 +4,12 @@ import '../css/app.css';
 import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
-import CompaniesIndex from "./Pages/Shop/Index";
+import ShopIndex from "./Pages/Shop/Index";
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
 const root = createRoot(document.getElementById('app'));
-root.render(<CompaniesIndex />);
+root.render(<ShopIndex />);
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
