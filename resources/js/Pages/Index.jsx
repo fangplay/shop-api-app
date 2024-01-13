@@ -1,6 +1,6 @@
 import React from 'react';
 import { Inertia } from '@inertiajs/inertia';
-import MainLayout from '@Layouts/MainLayout';
+import MainLayout from './MainLayout';
 
 export  default function Index(){
     return(

@@ -10,35 +10,35 @@ use App\Models\User;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Validator;
 
-class ShopController extends Controller
+class shopController extends Controller
 {
      //response the controller on website
      public function index(){
-        return Inertia::render('Shop/');
+        return Inertia::render('shop/');
     }
 
     public function register(){
-        return Inertia::render('Shop/Register');
+        return Inertia::render('shop/register');
     }
 
     public function login(){
-        return Inertia::render('Shop/Login');
+        return Inertia::render('shop/login');
     }
 
     public function productlist(){
-        return Inertia::render('Shop/ProductList');
+        return Inertia::render('shop/ProductList');
     }
 
     public function userproductlist(){
-        return Inertia::render('Shop/User/ProductList');
+        return Inertia::render('shop/user/ProductList');
     }
 
     public function userprofile(){
-        return Inertia::render('Shop/User');
+        return Inertia::render('shop/User');
     }
 
     public function orderlist(){
-        return Inertia::render('Shop/User/OrderList');
+        return Inertia::render('shop/User/OrderList');
     }
 
     //product management api route
