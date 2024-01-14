@@ -1,5 +1,4 @@
 import React from 'react';
-import { Inertia } from '@inertiajs/inertia';
 import MainLayout from './MainLayout';
 
 export  default function Index(){
