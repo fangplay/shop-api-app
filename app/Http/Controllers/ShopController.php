@@ -7,38 +7,44 @@ use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\User;
+use App\Http\Requests\ProfileUpdateRequest;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
+use Inertia\Response;
 use Illuminate\Support\Facades\Validator;
 
 class shopController extends Controller
 {
      //response the controller on website
      public function index(){
-        return Inertia::render('shop/');
+        return Inertia::render('Shop/Index');
     }
 
     public function register(){
-        return Inertia::render('shop/register');
+        return Inertia::render('Shop/Register');
     }
 
     public function login(){
-        return Inertia::render('shop/login');
+        return Inertia::render('Shop/Login');
     }
 
     public function productlist(){
-        return Inertia::render('shop/ProductList');
+        return Inertia::render('Shop/ProductList');
     }
 
     public function userproductlist(){
-        return Inertia::render('shop/user/ProductList');
+        return Inertia::render('Shop/User/ProductList');
     }
 
     public function userprofile(){
-        return Inertia::render('shop/User');
+        return Inertia::render('Shop/User');
     }
 
     public function orderlist(){
-        return Inertia::render('shop/User/OrderList');
+        return Inertia::render('Shop/User/OrderList');
     }
 
     //product management api route
