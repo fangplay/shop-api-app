@@ -4,12 +4,14 @@ import '../css/app.css';
 import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
-import ShopIndex from './Pages/Shop';
+import Shop from './Pages/Shop/Index';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Working By Laravel&ReactJS';
+const appName = import.meta.env.VITE_APP_NAME || 'NeoShop';
 
-const root = createRoot(document.getElementById('app'));
-root.render(<ShopIndex />);
+// const root = createRoot(document.getElementById('app'));
+// root.render(<Shop />);
+
+createRoot(document.getElementById('app')).render(<Shop />);
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,

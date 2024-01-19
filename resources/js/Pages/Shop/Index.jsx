@@ -1,8 +1,6 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { Head, usePage, Link } from "@inertiajs/inertia-react";
-import Layout from "./Layout";
+import { BrowserRouter as Router } from "react-router-dom";
+import NavLayout from "@/Layouts/NavbarLayout";
 
 // export default function Index() {
 //     return (
@@ -14,8 +12,8 @@ import Layout from "./Layout";
 // }
 export default function Index() {
     return (
-            <Layout>
+            <NavLayout>
             <p>Hello World</p>
-            </Layout>
+            </NavLayout>
     );
 }

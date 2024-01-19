@@ -19,32 +19,32 @@ use Illuminate\Support\Facades\Validator;
 class shopController extends Controller
 {
      //response the controller on website
-     public function index(){
-        return Inertia::render('Shop/Index');
+     public function index():Response{
+        return Inertia::render('Index');
     }
 
     public function register(){
-        return Inertia::render('Shop/Register');
+        return Inertia::render('Register');
     }
 
     public function login(){
-        return Inertia::render('Shop/Login');
+        return Inertia::render('Login');
     }
 
     public function productlist(){
-        return Inertia::render('Shop/ProductList');
+        return Inertia::render('ProductList');
     }
 
     public function userproductlist(){
-        return Inertia::render('Shop/User/ProductList');
+        return Inertia::render('User/ProductList');
     }
 
     public function userprofile(){
-        return Inertia::render('Shop/User');
+        return Inertia::render('User');
     }
 
     public function orderlist(){
-        return Inertia::render('Shop/User/OrderList');
+        return Inertia::render('User/OrderList');
     }
 
     //product management api route
@@ -145,10 +145,20 @@ class shopController extends Controller
 
     //user logout api route
     public function userlogout(Request $request){
-        auth('web')->logout();
+        $request->validate([
+            'password' => ['required', 'current_password'],
+        ]);
+
+        $user = $request->user();
+
+        Auth::logout();
+
+        $user->delete();
+
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return response()->route('user.login');
+
+        return Redirect::to('/Login');
     }
 
     //user insertation form registartion page
